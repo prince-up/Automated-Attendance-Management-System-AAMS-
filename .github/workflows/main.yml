@@ -38,7 +38,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKER_USERNAME }}/aams-app # DOCKER_USERNAME secret se username uthega
+          # FIX: Hardcoded username 'princeya' use kiya gaya hai taaki push fail na ho
+          images: princeya/aams-app 
           tags: |
             type=raw,value=latest
             type=sha,format=short
